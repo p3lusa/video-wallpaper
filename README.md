@@ -32,7 +32,7 @@ Omarchy separates **themes** and **plugins**:
 | Artifact | Repo | Installed with | What it provides |
 |---|---|---|---|
 | **Theme** `video-wallpaper` | `github.com/p3lusa/video-wallpaper` | `omarchy theme install` | colors, icons, configs, `backgrounds/`, `videos/` |
-| **Plugin** `p3lu.video-background` | `github.com/p3lusa/video-background` | `omarchy plugin add` | the video renderer (background layer) + the library tools (TUI, add/remove, cycler) |
+| **Plugin** `io.github.p3lu.video-background` | `github.com/p3lusa/video-background` | `omarchy plugin add` | the video renderer (background layer) + the library tools (TUI, add/remove, cycler) |
 
 > **Why two repos?** `omarchy theme install` clones the repo at the root of
 > `themes/<name>/` (theme files), and `omarchy plugin add` clones the repo at
@@ -67,11 +67,11 @@ omarchy theme set video-wallpaper
 # Update (the clone is pulled; re-applying the theme re-stages the assets)
 omarchy theme update
 omarchy theme set video-wallpaper
-omarchy plugin update p3lu.video-background
+omarchy plugin update io.github.p3lu.video-background
 
 # Uninstall (restores the stock image background behavior)
 omarchy theme remove video-wallpaper
-omarchy plugin remove p3lu.video-background --yes
+omarchy plugin remove io.github.p3lu.video-background --yes
 omarchy plugin enable omarchy.background
 ```
 
@@ -165,7 +165,7 @@ the clip in its `videos/`, and activates it. Result: the video wallpaper and
 every accent color on the system come from the same clip.
 
 ```bash
-~/.config/omarchy/plugins/p3lu.video-background/bin/video-theme.sh \
+~/.config/omarchy/plugins/io.github.p3lu.video-background/bin/video-theme.sh \
   ~/Videos/my-clip.mp4 my-theme
 ```
 
@@ -237,7 +237,7 @@ video-background/       ← PLUGIN repo (separate)
 ## Credits
 
 - **[Omarchy](https://github.com/omacom/omarchy)** (MIT) — the platform.
-  The `p3lu.video-background` plugin is derived from Omarchy's stock
+  The `io.github.p3lu.video-background` plugin is derived from Omarchy's stock
   `omarchy.background` plugin (same MIT license).
 - **[Wikimedia Commons](https://commons.wikimedia.org/)** — source of the
   bundled sample clips (see [`ATTRIBUTION.md`](ATTRIBUTION.md)).

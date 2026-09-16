@@ -94,7 +94,7 @@ Detección + aplicación de la aceleración. Sin dependencias nuevas (usa `lspci
 `lsmod`, `nvidia-smi`, `ffmpeg` y el propio nodo `/dev/dri/*`).
 
 **Salida:** un fichero de entorno (p.ej.
-`~/.config/omarchy/plugins/p3lu.video-background/hwaccel.env`) con las variables
+`~/.config/omarchy/plugins/io.github.p3lu.video-background/hwaccel.env`) con las variables
 `QT_FFMPEG_*` apropiadas para la gráfica detectada, **y** una línea de log
 legible (`hwaccel.log`) con lo detectado y lo aplicado, para diagnóstico.
 
