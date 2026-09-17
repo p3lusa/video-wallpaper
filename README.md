@@ -41,17 +41,27 @@ Omarchy separates **themes** and **plugins**:
 
 ## Requirements
 
+> **⚠️ This theme requires the `p3lu.video-background` plugin.**
+> Without it the theme still installs, but it **only shows static images** —
+> the clips in `videos/` never play. The plugin is the background-layer
+> renderer; the theme just ships the assets. Install both for the video
+> wallpaper to work.
+
 - Omarchy (Hyprland + Quickshell)
 - `QtMultimedia` for Quickshell (Qt6) — ships with the distro
+- **(Required) the [`p3lu.video-background` plugin](https://github.com/p3lusa/video-background)** — the video renderer. Without it the theme is a plain image theme.
 - (Recommended) hardware decoding via Vulkan (AMD / NVIDIA / Intel)
 
 ## Installation (Omarchy's own commands)
 
+**You need both artefacts:** the theme (assets + skin) and the plugin
+(renderer). Without the plugin, the theme only shows images.
+
 ```bash
-# 1) Theme
+# 1) Theme (assets: colors, videos, backgrounds)
 omarchy theme install https://github.com/p3lusa/video-wallpaper.git
 
-# 2) Video plugin
+# 2) Video plugin (REQUIRED — without this there is no video)
 omarchy plugin add https://github.com/p3lusa/video-background.git --enable
 
 # 3) Hand the background layer over to the video renderer (once)
@@ -60,6 +70,10 @@ omarchy plugin disable omarchy.background
 # 4) Apply the theme
 omarchy theme set video-wallpaper
 ```
+
+> **Quick check:** after the four steps, `omarchy theme current` must print
+> `video-wallpaper` and the wallpaper must be a looping video, not a still
+> image. If it's a still, the plugin isn't enabled (step 2).
 
 ## Update / uninstall
 
