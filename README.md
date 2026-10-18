@@ -8,7 +8,7 @@ on black).
 > Preview: ![video wallpaper preview](preview.gif)
 >
 > **Status:** v0.6.0 — theme + video plugin (v0.6.0) verified on real
-> hardware. Ships 3 sample clips (H.264, no audio, via Git LFS; free
+> hardware. Ships 3 sample clips (H.264, no audio, committed as plain git blobs — no Git LFS needed; free
 > material from Wikimedia Commons, see [`ATTRIBUTION.md`](ATTRIBUTION.md)) —
 > **add your own clips** to `videos/` (see [Videos](#videos-add-your-own)),
 > or turn any clip into a full, palette-matched theme with the Aether helper

@@ -1,10 +1,11 @@
-# Media: MP4 vía Git LFS (instalar: omarchy pkg add git-lfs)
-*.mp4   filter=lfs diff=lfs merge=lfs -text
-# El resto de media como binario (evita diff/merge de texto en blobs)
+# Toda la media como blob normal de git (sin Git LFS): `omarchy theme install`
+# clona sin git-lfs, así que cualquier filtro LFS dejaría punteros inútiles.
+# `binary` solo evita diff/merge de texto sobre los blobs.
+*.mp4   binary
 *.webm  binary
 *.mov   binary
+*.gif   binary
 backgrounds/*.png  binary
 backgrounds/*.jpg  binary
 backgrounds/*.jpeg binary
 backgrounds/*.webp binary
-*.gif   filter=lfs diff=lfs merge=lfs -text
